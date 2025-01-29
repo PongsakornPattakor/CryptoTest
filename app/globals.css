@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  @apply bg-white/40 backdrop-blur-md bg-center bg-no-repeat bg-cover p-5 w-full;
+}
+
+h1 {
+  @apply text-2xl md:text-3xl;
+}
+
+@layer components {
+  .body-box {
+    @apply font-['chakra_petch'] h-full min-h-screen min-w-full  grid grid-rows-[auto,1fr,auto] md:grid-rows-[10vh,1fr,auto] bg-gradient-to-tl from-[#3980e3] to-[#6505a1] bg-cover bg-no-repeat justify-self-center transition-all ease-in-out;
+  }
+  .menu-link {
+    @apply font-semibold md:px-2 md:py-1 md:transition-all ease-in-out duration-500 text-white hover:scale-[1.25] hover:text-black hover:bg-white rounded-md hover:flex-shrink hover:cursor-pointer;
+  }
+  .button-submit {
+    @apply rounded-md p-2  ring-1 ring-green-500 text-green-600 hover:bg-green-500 hover:text-white duration-300;
+  }
+  .button-reset {
+    @apply rounded-md p-2  ring-1 ring-red-500 text-red-600 hover:bg-red-500 hover:text-white duration-300;
+  }
+}
